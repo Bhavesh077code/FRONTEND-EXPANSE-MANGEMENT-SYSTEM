@@ -31,8 +31,7 @@ export default function SendOtp() {
     setMessage("");
 
     try {
-      const res = await axios.post(
-        `${BASE_URL}/user/send-otp`,
+      const res = await axios.post(`${BASE_URL}/user/send-otp`,
         { username, email },
         { withCredentials: true }
       );
@@ -43,7 +42,7 @@ export default function SendOtp() {
         localStorage.setItem("userId", res.data.user._id);
         //console.log("💾 userId saved:", res.data.user._id);
       } else {
-        //console.warn("⚠ userId missing in response");
+        console.warn("⚠ userId missing in response");
       }
 
       setMessage(res.data.message || "OTP sent successfully");
