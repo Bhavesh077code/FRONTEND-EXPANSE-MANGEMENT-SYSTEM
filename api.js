@@ -1,3 +1,3 @@
-const BASE_URL = "https://backend-expanse-mangement-system-98t3.onrender.com";
+const BASE_URL = "https://backend-expanse-mangement-system-tegm.onrender.com";
 
 export default BASE_URL;
